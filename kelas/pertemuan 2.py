@@ -44,3 +44,10 @@ print("tambah")
 
 
 
+angka= int(input("masukkan angka; "))
+if angka <6:
+    print("angka ini lebih kecil dari 5")
+elif angka>6 and angka <10:
+    print("angka ini lebih besar dari 5 dan lebih kecil dari 10 ")
+else: 
+    print("angka ini adalah 6 atau lebih besar")

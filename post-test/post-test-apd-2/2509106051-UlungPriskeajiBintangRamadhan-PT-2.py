@@ -32,3 +32,5 @@ print("Suhu 1 dan 2 (Fahrenheit) =", f1, " dan ", f2)
 print("Suhu 3 dan 4 (Kelvin) =", k1, " dan ", k2)
 print("Suhu 5 dan 6 (Reamur) =", r1, " dan ", r2)
 print("Bolean =", Bolean)
+
+print()
