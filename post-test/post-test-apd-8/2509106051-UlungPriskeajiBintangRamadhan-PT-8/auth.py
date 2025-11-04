@@ -1,4 +1,5 @@
 import data
+from prettytable import PrettyTable
 
 def login():
     username = input("Masukkan username: ")
@@ -25,20 +26,20 @@ def register():
 
 def menuadmin():
     while True:
-        print(
-            """
-            ========================================
-            |  Statistik Klub Liga Champions UEFA  |
-            ========================================
-            |    1. Tampilkan Data Klub            |
-            |    2. Tambah Data Klub               |
-            |    3. Update Data Klub               |
-            |    4. Hapus Data Klub                |
-            |    0. Keluar                         |
-            ========================================
-            """
-        )
-        pilih = input("Silahkan Pilih Menu: ")
+        table = PrettyTable()
+        table.field_names = ["No", "Statistik Klub Liga Champions UEFA"]
+        table.align = "l"  
+
+        table.add_row(["1", "Tampilkan Data Klub"])
+        table.add_row(["2", "Tambah Data Klub"])
+        table.add_row(["3", "Update Data Klub"])
+        table.add_row(["4", "Hapus Data Klub"])
+        table.add_row(["0", "Keluar"])
+        
+        print()
+        print(table)
+
+        pilih = input("\n Silahkan Pilih Menu: ")
         if pilih == "1":
             data.tampilkandata()
         elif pilih == "2":
@@ -89,17 +90,17 @@ def menuadmin():
 
 def menuuser():
     while True:
-        print(
-            """
-            ========================================
-            |  Statistik Klub Liga Champions UEFA  |
-            ========================================
-            |    1. Tampilkan Data Klub            |
-            |    0. Keluar                         |
-            ========================================
-            """
-        )
-        pilih = input("Silahkan Pilih Menu: ")
+        table = PrettyTable()
+        table.field_names = ["No", "Statistik Klub Liga Champions UEFA"]
+        table.align = "l"  
+
+        table.add_row(["1", "Tampilkan Data Klub"])
+        table.add_row(["0", "Keluar"])
+
+        print()
+        print(table)
+        
+        pilih = input("\n Silahkan Pilih Menu: ")
         if pilih == "1":
             data.tampilkandata()
         elif pilih == "0":

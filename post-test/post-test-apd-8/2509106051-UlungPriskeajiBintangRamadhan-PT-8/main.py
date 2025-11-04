@@ -1,19 +1,19 @@
+from prettytable import PrettyTable
 from auth import login, register
 
 def menuawal():
     while True:
-        print(
-            """
-            ========================================
-            |     Program Liga Champions UEFA      |
-            ========================================
-            |    1. Login                          |
-            |    2. Register                       |
-            |    0. Keluar                         |
-            ========================================
-            """
-        )
-        pilihan = input("Silahkan Pilih Menu: ")
+        table = PrettyTable()
+        table.field_names = ["No", "Program Liga Champions UEFA"]
+        table.align = "l"   
+        table.add_row(["1", "Login"])
+        table.add_row(["2", "Register"])
+        table.add_row(["0", "Keluar"])
+
+        print()
+        print(table)
+
+        pilihan = input("\n Silahkan Pilih Menu: ")
         if pilihan == "1":
             login()
         elif pilihan == "2":
